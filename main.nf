@@ -15,7 +15,7 @@ process getAccession {
 	val sraID from singleSRAId
 	
 	output:
-	set val(sraID), file("*.fastq.gz") into readFiles
+	file("*.fastq.gz") optional true
 
 	script:
 	"""
